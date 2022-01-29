@@ -936,12 +936,25 @@
 # y = lambda i: i.replace(".", "", 1).isdigit()
 # z = lambda j: y(j[1:]) if j[0]== "-" else y(j)
 # print(z(x))
+# ---------------------------------------------------------------------------------
 # Ćwiczenie
 # Napisz program w Pythonie do filtrowania listy liczb parzystych i nieparzystych całkowitych za pomocą lambda i filter
 
-lista = [1,2,3,4,5,6,7,8,9,10]
-wynik = list(filter(lambda x: x % 2 == 0, lista))
-print(wynik)
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# wynik = list(filter(lambda x: x % 2 == 0, lista))
+# print(wynik)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+
+# Napisz program w Pythonie, aby znaleźć przecięcie dwóch podanych list za pomocą lambda i filter
+
+array_nums1 = [1, 2, 3, 5, 7, 8, 9, 10]
+array_nums2 = [1, 2, 4, 8, 9]
+czesc_wspolna = list(filter(lambda x: x in array_nums1, array_nums2))
+print(czesc_wspolna)
+
+
+
 
 
 
