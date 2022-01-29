@@ -1085,4 +1085,8 @@
 # numbers = [6,9,3,1]
 # print(sorted(numbers))
 #
-
+# x = 4.0
+# print(x)
+# print(type(x))
+# print(x.real, "+", x.imag, 'i')
+# print(x.is_integer())
