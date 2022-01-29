@@ -1037,6 +1037,20 @@
 # ---------------------------------------------------------------------------------
 # Ćwiczenie
 #
+# Napisz program w Pythonie, aby:
+# Znaleźć liczby z podanego ciągu
+# Zapisać je na liście
+# Wyświetlić liczby w posortowanej formie
+# Użyj funkcji tworzenia listy – ang. list comprehension, aby rozwiązać problem
+
+str1 = "sdf 23 safs8 5 sdfsd8 sdfs 56 21sfs 20 5"
+new_list = str1.split()
+numery = sorted([int(z) for z in new_list if z.isdigit()])
+print(numery)
+
+
+
+
 
 
 
