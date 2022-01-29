@@ -1052,36 +1052,23 @@
 
 # x = 4
 # print(type(x))
-
+#
 # x = 'Hello'
 # print(type(x))
-
-
-print(type(x))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#
+# x = 3.14565
+# print(type(x))
+#
+# x = 4
+# print(id(x))
+#
+# x = 'Hello'
+# print(id(x))
+#
+# x = 4.14567
+# print(id(x))
+#
+# lst = [1,2,3]
+# print(id(lst))
+# print(type(lst))
+#
