@@ -989,7 +989,53 @@
 #
 # sample_names = ['antoni', 'Jakub', 'zuzanna', 'Julia', 'Jan', 'szymon']
 # duze_imiona = list(filter(lambda x: x[0].isupper() and x[1:].islower(), sample_names))
+# x= ", ".join(duze_imiona)
 # print(len(duze_imiona))
+# print(len(x))
+# print(x)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie podnoszący do kwadratu i sześcianu każdą liczbę z podanej listy liczb całkowitych, używając lambda i map
+
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# lista = list(map(lambda x: x**2, nums))
+# print(lista)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby dodać dwie podane listy za pomocą map i lambda
+#
+# nums1 = [1, 2, 3]
+# nums2 = [4, 5, 6]
+# lista = list(map(lambda x,y: x+y ,nums1, nums2))
+# print(lista)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, który za pomocą funkcji lambdamnoży każdą liczbę z podanej listy przez określoną liczbę
+# Wydrukuj wynik
+#
+# nums = [2, 4, 6, 9, 11]
+# n = 2
+# lista = list(map(lambda x: x*n , nums))
+# print(lista)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, który usuwa liczby dodatnie z podanej listy liczb. Zsumuj liczby ujemne i wydrukuj wartość bezwzględną
+# za pomocą tworzenia listy – ang. list comprehension. Wydrukuj wynik
+
+nums = [2, 4, -6, -9, 11, -12, 14, -5, 17]
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
