@@ -939,20 +939,57 @@
 # ---------------------------------------------------------------------------------
 # Ćwiczenie
 # Napisz program w Pythonie do filtrowania listy liczb parzystych i nieparzystych całkowitych za pomocą lambda i filter
-
+#
 # lista = [1,2,3,4,5,6,7,8,9,10]
 # wynik = list(filter(lambda x: x % 2 == 0, lista))
 # print(wynik)
 # ---------------------------------------------------------------------------------
 # Ćwiczenie
-
 # Napisz program w Pythonie, aby znaleźć przecięcie dwóch podanych list za pomocą lambda i filter
-
-array_nums1 = [1, 2, 3, 5, 7, 8, 9, 10]
-array_nums2 = [1, 2, 4, 8, 9]
-czesc_wspolna = list(filter(lambda x: x in array_nums1, array_nums2))
-print(czesc_wspolna)
-
+#
+# array_nums1 = [1, 2, 3, 5, 7, 8, 9, 10]
+# array_nums2 = [1, 2, 4, 8, 9]
+# czesc_wspolna = list(filter(lambda x: x in array_nums1, array_nums2))
+# print(czesc_wspolna)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby policzyć parzyste i nieparzyste liczby w danej tablicy liczb całkowitych, używając lambda i filter
+#
+# lista = [1,2,3,4,5,6,7,8,9,10]
+# wynik = list(filter(lambda x: x % 2 == 0, lista))
+# print(len(wynik))
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby znaleźć wartości o długości sześć na podanej liście za pomocą funkcji lambda i filter
+#
+# weekdays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
+# wynik = list(filter(lambda x : len(x) == 6, weekdays))
+# print(wynik)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, aby znaleźć liczby podzielne przez dziewiętnaście lub trzynaście z listy liczb za pomocą lambda i filter
+#
+# nums = [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
+# wynik = list(filter(lambda x : x % 19 == 0 or x % 13 == 0, nums))
+# print(wynik)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, aby znaleźć palindromy na podanej liście ciągów za pomocą lambda i filter
+# Palindrom – wyrażenie brzmiące tak samo czytane od lewej do prawej i od prawej do lewej
+# Przykładem palindromu jest: „kobyła ma mały bok”
+#
+# texts = ["php", "w3r", "Python", "abcd", "Java", "aaa"]
+# palindrom = list(filter(lambda x: x[0:] == x[::-1],texts))
+# print(palindrom)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+# Napisz program w Pythonie, który zsumuje długość imion z danej listy imion po usunięciu imion zaczynających się od małej litery
+# Użyj funkcji lambda
+#
+# sample_names = ['antoni', 'Jakub', 'zuzanna', 'Julia', 'Jan', 'szymon']
+# duze_imiona = list(filter(lambda x: x[0].isupper() and x[1:].islower(), sample_names))
+# print(len(duze_imiona))
 
 
 
