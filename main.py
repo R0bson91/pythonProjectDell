@@ -936,4 +936,12 @@
 # y = lambda i: i.replace(".", "", 1).isdigit()
 # z = lambda j: y(j[1:]) if j[0]== "-" else y(j)
 # print(z(x))
+# Ćwiczenie
+# Napisz program w Pythonie do filtrowania listy liczb parzystych i nieparzystych całkowitych za pomocą lambda i filter
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+wynik = list(filter(lambda x: x % 2 == 0, lista))
+print(wynik)
+
+
 
