@@ -1072,3 +1072,17 @@
 # print(id(lst))
 # print(type(lst))
 #
+# L = [1,2,3]
+# L.append(100)
+# print(L)
+#
+# x = 4.5
+# print(x.real, "+", x.imag, 'i')
+#
+# f = open("test.txt", "w")
+# print(type(f))
+#
+# numbers = [6,9,3,1]
+# print(sorted(numbers))
+#
+
