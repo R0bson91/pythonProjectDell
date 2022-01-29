@@ -1022,8 +1022,26 @@
 #
 # Napisz program w Pythonie, który usuwa liczby dodatnie z podanej listy liczb. Zsumuj liczby ujemne i wydrukuj wartość bezwzględną
 # za pomocą tworzenia listy – ang. list comprehension. Wydrukuj wynik
+#
+# nums = [2, 4, -6, -9, 11, -12, 14, -5, 17]
+# print(abs(sum([x for x in nums if x<0])))
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
+# Napisz program w Pythonie, aby zmienić kolejność liczb dodatnich i ujemnych w danej liście (najpierw wszystkie ujemne,
+# potem wszystkie dodatnie) za pomocą tworzenia listy – ang. list comprehension
+#
+# array_nums = [-1, 2, -3, 5, 7, 8, 9, -10]
+# nums = [x for x in array_nums if x<0] + [x for x in array_nums if x>0]
+# print(nums)
+# ---------------------------------------------------------------------------------
+# Ćwiczenie
+#
 
-nums = [2, 4, -6, -9, 11, -12, 14, -5, 17]
+
+
+
+
 
 
 
