@@ -1287,4 +1287,38 @@
 # print(a,b)
 # ---------------------------------------------------------------------------------
 # CWICZENIE
+# Utwórz klasę Vehicle z atrybutami instancji max_speed i mileage. Stwórz obiekt i
+# w trakcie inicjacji przypisz jego atrybutom (odpowiednio) wartości 240 i 18.
+# Wydrukuj te atrybuty.
+#
+# class Vehicle:
+#     def __init__(self, max_speed, mileage):
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+# a = Vehicle(240, 18)
+#
+# print(a.max_speed,",",a.mileage)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Utwórz klasę Car z dwoma atrybutami instancji:
+# .color, który przechowuje nazwę koloru samochodu jako ciąg testowy (str)
+# .mileage, który przechowuje liczbę kilometrów przejechanych przez samochód jako liczbę całkowitą (int)
+# Następnie utwórz instancję dwóch obiektów Car - niebieski samochód mający 20 000 kilometrów przebiegu
+# i czerwony samochód mający 30 000 kilometrów przebiegu - i wydrukuj ich kolory oraz przebiegi.
+# Twój wynik powinien wyglądać następująco:
+# Niebieski samochód ma 20,000 kilometrów przebiegu.
+# Czerwony samochód ma 30,000 kilometrów przebiegu.
 
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+x = Car(color = "niebieski" , mileage = 20000)
+y = Car(color = "czerwony", mileage =30000)
+z = Car(color = "zielony", mileage =40000)
+print(x.color, x.mileage)
+print(y.color, y.mileage)
+print(z.color, z.mileage)
+
+for petla in (x,y,z):
+    print(petla.color, petla.mileage)
