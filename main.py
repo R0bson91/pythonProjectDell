@@ -1192,17 +1192,99 @@
 # p1 = Person("Jan", 36)
 # print(p1.name)
 # print(p1.age)
+# ---------------------------------------------------------------------------------
 #
-
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-    def myfunc(self):
-        print("Cześć, mam na imię " + self.name)
-p1 = Person("Jan", 36)
-p1.myfunc()
-
-
-
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def myfunc(self):
+#         print("Cześć, mam na imię " + self.name)
+# p1 = Person("Jan", 36)
+# p1.myfunc()
+# ---------------------------------------------------------------------------------
+#
+# class Person:
+#     def __init__(mysillyobject, name, age):
+#         mysillyobject.name = name
+#         mysillyobject.age = age
+#
+#     def myfunc(abc):
+#         print("Cześć, mam na imię " + abc.name)
+# p1 = Person("Jan", 36)
+# p1.myfunc()
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Klasa o nazwie MyClass z atrybutem o nazwie x No to jeszcze raz! Utwórz klasę o
+# nazwie MyClass z atrybutem o nazwie x = 5. Teraz użyj klasy o nazwie MyClass do
+# stworzenia obiektu. Utwórz obiekt o nazwie p1 i wydrukuj wartość x.
+#
+# class MyClass:
+#     x = 5
+# p1 = MyClass()
+# print(p1.x)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+#
+# class KontoBankowe:
+#     def __init__(self, nazwa, stan = 0):
+#         self.nazwa = nazwa
+#         self.stan = stan
+#
+#     def info(self):
+#         print("nazwa:", self.nazwa)
+#         print("stan:", self.stan)
+#
+#     def wyplac(self, ilosc):
+#         self.stan -= ilosc
+#
+#     def wplac(self, ilosc):
+#         self.stan += ilosc
+#
+# jk = KontoBankowe("Jan Kowalski", 1000)
+# jk.info()
+# jk.wplac(2000)
+# jk.wyplac(2500)
+# jk.info()
+# jk.stan = 0  # Dostęp do składowej `stan`
+# jk.info()
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Klasa (class) dotycząca wyimaginowanego inwentarza odrzutowca jest już # dla Was
+# zdefiniowana. Również instancja tej klasy Jets jest stworzona i przypisana do zmiennej first_item.
+# Wydrukuj name z first_item.
+# Wskazówka: Atrybut name można wywołać dodając go do instancji class, na
+# przykład: anyinstance.name
+#
+# class Jets:
+#
+#
+#     def __init__(self, name, country):
+#         self.name = name
+#         self.origin = country
+#
+# first_item = Jets("F16", "USA")
+#
+# a=first_item.name
+# print(a)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Tym razem wydrukuj origin z first_item.
+#
+# class Jets:
+#     model = None
+#     country = 0
+#
+#     def __init__(self, name, country):
+#         self.name = name
+#         self.origin = country
+#
+# first_item = Jets("F16", "USA")
+#
+# a=first_item.name
+# b=first_item.origin
+#
+# print(a,b)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
 
