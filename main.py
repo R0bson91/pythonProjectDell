@@ -1308,17 +1308,53 @@
 # Twój wynik powinien wyglądać następująco:
 # Niebieski samochód ma 20,000 kilometrów przebiegu.
 # Czerwony samochód ma 30,000 kilometrów przebiegu.
-
-class Car:
-    def __init__(self, color, mileage):
-        self.color = color
-        self.mileage = mileage
-x = Car(color = "niebieski" , mileage = 20000)
-y = Car(color = "czerwony", mileage =30000)
-z = Car(color = "zielony", mileage =40000)
-print(x.color, x.mileage)
-print(y.color, y.mileage)
-print(z.color, z.mileage)
-
-for petla in (x,y,z):
-    print(petla.color, petla.mileage)
+#
+# class Car:
+#     def __init__(self, color, mileage):
+#         self.color = color
+#         self.mileage = mileage
+# x = Car(color = "niebieski" , mileage = 20000)
+# y = Car(color = "czerwony", mileage =30000)
+# z = Car(color = "zielony", mileage =40000)
+# print(x.color, x.mileage)
+# print(y.color, y.mileage)
+# print(z.color, z.mileage)
+#
+# for petla in (x,y,z):
+#     print(petla.color, petla.mileage)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Stwórz nowe instancje od pierwszej do szóstej pozycji w tej kolejności: F14, SU 33, AJS37, Mirage 2000, Mig 29, A10.
+# Możesz sprawdzić Podpowiedź 1, aby sprawdzić origin.
+# Wskazówka 1
+# SU33: Rosja
+# AJS37: Szwecja
+# Mirage2000: Francja
+# F14: USA
+# Mig29: ZSRR
+# A10: USA
+# Wskazówka 2
+# Możesz utworzyć instancje w następujący sposób:
+# first_item=Jets(name, country)
+#
+# class Jets:
+#     def __init__(self, name, country):
+#         self.name = name
+#         self.origin = country
+#     def x(self, drugi):
+#         print(self.name, self.origin)
+#         print(drugi.name, drugi.origin)
+#
+# first_item=Jets(name = "F14", country = "USA")
+# second_item=Jets(name = "SU33", country = "Rosja")
+# third_item=Jets(name = "AJS37", country = "Szwecja")
+# fourth_item=Jets(name = "Mirage2000", country = "Francja")
+# fifth_item=Jets(name = "Mig29", country = "ZSRR")
+# sixth_item=Jets(name = "A10", country = "USA")
+#
+# first_item.x(second_item)
+# third_item.x(second_item)
+#
+# first_army=[first_item.name,second_item.name,third_item.name,fourth_item.name,fifth_item.name,sixth_item.name]
+#
+# print(first_army)
