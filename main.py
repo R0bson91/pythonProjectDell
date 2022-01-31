@@ -1090,4 +1090,42 @@
 # print(type(x))
 # print(x.real, "+", x.imag, 'i')
 # print(x.is_integer())
+# ---------------------------------------------------------------------------------
+# KLASY
+#
+# class NazwaKlasy:
+#     pass
+#
+# obiekt = NazwaKlasy()
+# instancja = NazwaKlasy()
+#
+# print(type(obiekt))
+# print(type(instancja))
+# print(id(obiekt))
+# print(id(instancja))
+# print(obiekt)
+# ---------------------------------------------------------------------------------
+# class NazwaKlasy:
+#     def nazwa_metody(self, argument1, argument2): # jedno wcięcie
+#         print(argument1) # drugie wcięcie
+#         print(argument2)
+# obiekt = NazwaKlasy()
+# obiekt.nazwa_metody("arg1", "arg2")
+#
+#
+# """Dokumentacja modułu"""
+#
+# class MyClass:
+#     """Dokumentacja klasy"""
+#
+#     def my_method(self):
+#         """Dokumentacja metody"""
+#
+# def my_function():
+#     """Dokumentacja funkcji"""
+#
+# help(MyClass)
+# help(MyClass.my_method)
+
+
 
