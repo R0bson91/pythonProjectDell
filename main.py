@@ -1126,6 +1126,50 @@
 #
 # help(MyClass)
 # help(MyClass.my_method)
+#
+# class NazwaKlasy:
+#     atrybut_pierwszy = "Wartość"
+#     atrybut_drugi = 123.0
+# class NazwaKlasy:
+#     def __init__(self, trzeci):
+#      self.atrybut_pierwszy = "Wartość"
+#      self.atrybut_drugi = 123.0
+#      self.atrybut_trzeci = trzeci
+# instancja = NazwaKlasy("trzeci")
+# print(instancja.atrybut_pierwszy)
+# print(instancja.atrybut_drugi)
+# print(instancja.atrybut_trzeci)
+#
+# class MyClass:
+#     x = 5
+# p1 = MyClass()
+# print(p1.x)
+#
+# class Parrot:
+#     pass
+# obj = Parrot()
+# ---------------------------------------------------------------------------------
+# class Parrot:
+#
+#     # atrybut klasy
+#     species = "ptak"
+#
+#     # atrybut instancji
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# # utworzenie instancji klasy Parrot
+# blu = Parrot("Blu", 10)
+# woo = Parrot("Woo", 15)
+# # uzyskanie dostępu do atrybutów klasy
+# print("Blu to", blu.__class__.species)
+# print("Woo to również", woo.__class__.species)
+# # za chwilę wytłumaczymy sobie dokładniej o co chodzi z __class__
+# # uzyskanie dostępu do atrybutów instancji
+# print(blu.name, "ma", blu.age, "lat")
+# print(woo.name, "ma", woo.age, "lat")
+
+
 
 
 
