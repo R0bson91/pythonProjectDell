@@ -1153,7 +1153,6 @@
 #
 #     # atrybut klasy
 #     species = "ptak"
-#
 #     # atrybut instancji
 #     def __init__(self, name, age):
 #         self.name = name
@@ -1168,7 +1167,41 @@
 # # uzyskanie dostępu do atrybutów instancji
 # print(blu.name, "ma", blu.age, "lat")
 # print(woo.name, "ma", woo.age, "lat")
+# ---------------------------------------------------------------------------------
+# class Parrot:
+#
+#     # atrybuty instancji
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     # metoda instancji
+#     def sing(self, song):
+#         return self.name + " śpiewa " + song
+#
+#     def dance(self):
+#         return self.name + " teraz tańczy"
+# # utworzenie wystąpienia obiektu
+# blu = Parrot("Blu", 10)
+# ---------------------------------------------------------------------------------
+#
+# class Person:
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# p1 = Person("Jan", 36)
+# print(p1.name)
+# print(p1.age)
+#
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def myfunc(self):
+        print("Cześć, mam na imię " + self.name)
+p1 = Person("Jan", 36)
+p1.myfunc()
 
 
 
