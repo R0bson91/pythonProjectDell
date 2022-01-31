@@ -1358,3 +1358,35 @@
 # first_army=[first_item.name,second_item.name,third_item.name,fourth_item.name,fifth_item.name,sixth_item.name]
 #
 # print(first_army)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Dodaj kolejny atrybut o nazwie „quantity” do metody inicjalizacji (zwykle nazywanej konstruktorem lub __init__).
+# Następnie zdefiniuj przypisanie tego atrybutu do atrybutu self.quantity wewnątrz konstruktora.
+# Następnie utwórz 2 instancje dla: F14 i Mirage2000 z ilościami 87 i 35.
+# Wskazówka 1
+# Możesz dodać parametr quantity do konstruktora w następujący sposób:
+# def __init__(self, name, country, quantity):
+# Następnie musisz przypisać ten parametr do atrybutu self, aby istniało sensowne połączenie między parametrem a atrybutem.
+# Wskazówka 2
+# Możesz dodać parametr quantity do konstruktora w następujący sposób:
+# def __init__(self, name, country, quantity):
+#
+#     self.name = name
+#     self.origin = country
+#     self.quantity = quantity
+# Następnie musisz przypisać ten parametr do atrybutu self, aby istniało sensowne połączenie między parametrem a atrybutem.
+# Wskazówka 3
+# Możesz tworzyć instancje klasy Jets jak poniżej:
+# first_item=Jets("F14","USA",87)
+# second_item=Jets("Mirage2000","France",35)
+#
+# class Jets:
+#     def __init__(self, name, country, quantity):
+#         self.name = name
+#         self.origin = country
+#         self.quantity = quantity
+# first_item=Jets("F14","USA",87)
+# second_item=Jets("Mirage2000","France",35)
+#
+# total= first_item.quantity + second_item.quantity
+# print(total)
