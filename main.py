@@ -1390,3 +1390,9 @@
 #
 # total= first_item.quantity + second_item.quantity
 # print(total)
+#
+# ĆWICZENIA 07.02.2022 Z WOJTKIEM
+
+import sqlite3
+
+conn = sqlite3.connect('example.db')
