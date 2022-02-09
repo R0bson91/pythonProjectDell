@@ -1393,10 +1393,10 @@
 #
 # ĆWICZENIA 07.02.2022 Z WOJTKIEM
 
-import sqlite3
-import io
-
-conn = sqlite3.connect('example.db')
+# import sqlite3
+# import io
+#
+# conn = sqlite3.connect('example.db')
 
 # c = conn.cursor()
 
@@ -1428,3 +1428,40 @@ conn = sqlite3.connect('example.db')
 # print('Kopia zapasowa zostala wykonana pomyslnie.')
 # print('Zapisano jako example_dump.sql')
 # conn.close()
+#
+import numpy as np
+#
+# print(np.__version__)
+# ---------------------------------------------------------------------------------
+# tablica liczb zmiennoprzecinkowych
+#
+# np.array([4.1, 0, 1, 2, 3])
+# np.array([range(i, i + 3) for i in [2, 4, 6]])
+
+# Trzy wymiarowa tablica o wymiarach 2x3x4
+# z losowymi liczbami całkowitymi z przedziału [0, 100)
+
+# x = np.random.randint(100, size=(2, 3, 4))
+# print(x)
+#
+# print(f"x dtype: {x.dtype}")  # typ danych przechowywanych w tablicy
+# print(f"itemsize: {x.itemsize} bytes")  # rozmiar jednego elementu
+# print(f"nbytes: {x.nbytes} bytes")  # rozmiar całej tablicy (itemsize x size)
+#
+# y = np.arange(0, 10)
+# print(y)
+#
+# x = np.array([1, 2, 3])
+# print(x.reshape((1, 3))) # dwuwymiarowa tablica z jednym wierszem i trzema kolumnami
+# print(x.reshape((3, 1))) # dwuwymiarowa tablica z trzema wierszami i jedną kolumną
+#
+# x = np.array([1, 2, 3])
+# y = np.array([3, 2, 1])
+# np.concatenate([x, y])
+
+
+
+
+
+
+
