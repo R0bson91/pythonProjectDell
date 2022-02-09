@@ -1394,5 +1394,37 @@
 # ĆWICZENIA 07.02.2022 Z WOJTKIEM
 
 import sqlite3
+import io
 
 conn = sqlite3.connect('example.db')
+
+# c = conn.cursor()
+
+# c.execute("INSERT INTO stocks values('2022-02-07', 'BUY', 'RHAT', 100, 34.23)")
+#
+# conn.commit()
+# conn.close()
+
+# t = ('RHAT', )
+# c.execute('SELECT * FROM stocks where symbol=?', t)
+# print(c.fetchone())
+#
+# purchases = [
+#     ('2022-01-07', 'BUY', 'IBM', 1000, 45.00),
+#     ('2021-07-05', 'SELL', 'MSFT', 1000, 72.00),
+#     ('2005-05-09', 'SELL', 'APPLE', 500, 53.00)
+# ]
+#
+# c.executemany('INSERT INTO stocks values(?, ?, ?, ?, ?)', purchases)
+#
+# conn.commit()
+#
+# for row in c.execute('SELECT * from stocks order by price'):
+#     print(row)
+#
+# with io.open('example_dump.sql', 'w') as f:
+#     for line in conn.iterdump():
+#         f.write('%s\n' % line)
+# print('Kopia zapasowa zostala wykonana pomyslnie.')
+# print('Zapisano jako example_dump.sql')
+# conn.close()
