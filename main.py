@@ -1429,7 +1429,7 @@
 # print('Zapisano jako example_dump.sql')
 # conn.close()
 #
-import numpy as np
+# import numpy as np
 #
 # print(np.__version__)
 # ---------------------------------------------------------------------------------
@@ -1458,10 +1458,3 @@ import numpy as np
 # x = np.array([1, 2, 3])
 # y = np.array([3, 2, 1])
 # np.concatenate([x, y])
-
-
-
-
-
-
-
