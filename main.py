@@ -1391,6 +1391,382 @@
 # total= first_item.quantity + second_item.quantity
 # print(total)
 #
+# OOP - dziedziczenie
+#
+# class KontoBankowe:
+#     def __init__(self, nazwa, stan=0):
+#         self.nazwa = nazwa
+#         self.stan = stan
+#
+#     def info(self):
+#         print("nazwa:", self.nazwa)
+#         print("stan:", self.stan)
+#
+#     def wyplac(self, ilosc):
+#         self.stan -= ilosc
+#
+#     def wplac(self, ilosc):
+#         self.stan += ilosc
+#
+# class KontoDebetowe(KontoBankowe):
+#     pass
+#
+# class KontoDebetowe(KontoBankowe):
+#     def __init__(self, nazwa, stan=0, limit=0):
+#         KontoBankowe.__init__(self, nazwa, stan)
+#         self.limit = limit
+#
+#     def wyplac(self, ilosc):
+#         """Jeżeli stan konta po operacji przekroczyłby limit, przerwij."""
+#         if (self.stan - ilosc) < (-self.limit):
+#             print("Brak srodkow na koncie")
+#         else:
+#             KontoBankowe.wyplac(self, ilosc)
+#
+# account = KontoDebetowe("Jan Nowak", 0, 1000)
+# account.info()
+# account.wplac(500)
+# account.info()
+# account.wyplac(1000)
+# account.info()
+# account.wyplac(1000)
+# account.info()
+#
+# # # bylo:
+# # def __init__(self, nazwa, stan=0, limit=0):
+# #     KontoBankowe.__init__(self, nazwa, stan)
+# #     self.limit = limit
+# #
+# # # jest:
+# # def __init__(self, nazwa, stan=0, limit=0):
+# #     super().__init__(nazwa, stan)
+# #     self.limit = limit
+#
+# class KontoDebetowe(KontoBankowe):
+#     def __init__(self, nazwa, stan=0, limit=0):
+#         super().__init__(nazwa, stan)
+#         self.limit = limit
+#
+#     def wyplac(self, ilosc):
+#         """Jeżeli stan konta po operacji przekroczyłby limit, przerwij."""
+#         if (self.stan - ilosc) < (-self.limit):
+#             print("Brak srodkow na koncie")
+#         else:
+#             super().wyplac(ilosc)
+# ---------------------------------------------------------------------------------
+# class A:
+#     """Rodzic pierwszy"""
+#
+#     def __init__(self):
+#         super().__init__()
+#         self.a = "A"
+#
+#     def fa(self):
+#         print("a:", self.a)
+#
+# class B:
+#     """Rodzic drugi"""
+#
+#     def __init__(self):
+#         super().__init__()
+#         self.b = "B"
+#
+#     def fb(self):
+#         print("b:", self.b)
+#
+#
+# class Pochodna(B, A):
+#     """Dziecko"""
+#
+#     def __init__(self):
+#         super().__init__()
+#
+# print(A.__doc__)
+# print(B.__doc__)
+# print(Pochodna.__doc__)
+#
+# d = Pochodna()
+# print(d.a)
+# print(d.b)
+# d.fa()
+# d.fb()
+# ---------------------------------------------------------------------------------
+# CWICZENIE - KOŁO
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Kolo(Figura):
+#     def __init__(self, r):
+#         self.r = r
+#     def obwod(self):
+#         return 2 * math.pi * self.r
+#     def pole(self):
+#         return self.r ** 2 * math.pi
+#
+# k = Kolo(5)
+# o = Kolo(5)
+# print(k.pole())
+# print(o.obwod())
+# ---------------------------------------------------------------------------------
+# CWICZENIE - TRÓJKĄT
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Trojkat(Figura):
+#     def __init__(self, a):
+#         self.a = a
+#     def obwod(self):
+#         return 3 * self.a
+#     def pole(self):
+#         return self.a ** 2 * 3 **(1/2)/4
+#
+# p = Trojkat(3)
+# print(p.obwod())
+# print(p.pole())
+# ---------------------------------------------------------------------------------
+# CWICZENIE - PROSTOKĄT
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Prostokat(Figura):
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+#     def obwod(self):
+#         return 2*self.a + 2*self.b
+#     def pole(self):
+#         return self.a * self.b
+
+# p = Prostokat(3,4)
+# print(p.obwod())
+# print(p.pole())
+#
+# ---------------------------------------------------------------------------------
+# CWICZENIE - KWADRAT - DZIEDZICZENIE PO PROSTOKACIE
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Kwadrat(Prostokat):
+#     def __init__(self, a):
+#         self.a = a
+#         self.b = a
+#     # def obwod(self):
+#     #     return 4*self.a
+#     # def pole(self):
+#     #     return self.a ** 2
+#
+# p = Kwadrat(3)
+# print(p.obwod())
+# print(p.pole())
+#
+# ---------------------------------------------------------------------------------
+# CWICZENIE - RÓWNOLEGŁOBOK
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Rownoleglobok(Figura):
+#     def __init__(self, a, b, h):
+#         self.a = a
+#         self.b = b
+#         self.h = h
+#     def obwod(self):
+#         return 2*self.a + 2*self.b
+#     def pole(self):
+#         return self.a * self.h
+#
+# p = Rownoleglobok(3,4,6)
+# print(p.obwod())
+# print(p.pole())
+# ---------------------------------------------------------------------------------
+# CWICZENIE - TRAPEZ PROSTOKĄTNY
+#
+# import math
+#
+# class Figura:
+#     def obwod(self):  # L
+#         """Obliczanie obwodu."""
+#         raise NotImplementedError
+#
+#     def pole(self):  # S/P
+#         """Obliczanie pola powierzchni."""
+#         raise NotImplementedError
+#
+# class Trapez(Figura):
+#     def __init__(self, a, b, c, d, h):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#         self.d = d
+#         self.h = h
+#     def obwod(self):
+#         return self.a + self.b + self.c + self.d
+#     def pole(self):
+#         return self.h * ((self.a + self.b)/2)
+#
+# p = Trapez(3,4,6,7,9)
+# print(p.obwod())
+# print(p.pole())
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Utwórz podrzędną klasę Bus, która odziedziczy wszystkie zmienne i metody klasy Vehicle
+# Utwórz obiekt klasy Bus, która dziedziczy wszystkie zmienne i metody klasy Vehicle i wyświetli je.
+# Oczekiwany wynik: Nazwa pojazdu: Szkolne Volvo Prędkość: 180 Przebieg: 12
+#
+# class Vehicle:
+#
+#     def __init__(self, name, max_speed, mileage):
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+# class Bus(Vehicle):
+#     pass
+# poj = Bus("Autobus szkolny", 180, 12)
+# print(poj.mileage, poj.name, poj.max_speed)
+# ---------------------------------------------------------------------------------
+# CWICZENIE - dziedziczenie klas
+# Utwórz klasę Bus, która dziedziczy po klasie Vehicle. Podaj argument pojemności w metodzie
+# Bus.seating_capacity() o domyślnej wartości 50.
+# Dane wejściowe:
+# Użyj poniższego kodu dla swojej nadrzędnej klasy Vehicle.
+# Musisz przesłonić/nadpisać metodę - w klasie pochodnej na specyficznie zaimplementować metodę
+# która została już zdefiniowana w klasie bazowej.
+#
+# Oczekiwany wynik:
+# Liczba miejsc siedzących w Szkolne Volvo to 50 pasażerów
+
+# class Vehicle:
+#     def __init__(self, name, max_speed, mileage):
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+#
+#     def seating_capacity(self, capacity):
+#         return f"Liczba miejsc siedzących w {self.name} to {capacity} pasażerów"
+#
+# class Bus(Vehicle):
+#     def seating_capacity(self, capacity=50):
+#         return super().seating_capacity(capacity)
+#
+# k = Bus("bus", 80, 500)
+# print(k.mileage, k.name, k.max_speed, k.seating_capacity())
+# ---------------------------------------------------------------------------------
+# CWICZENIE - Zdefiniuj atrybut (właściwość), który powinna mieć taką samą wartość
+# dla każdej instancji klasy
+# Zdefiniuj atrybut klasy „color” z domyślną wartością biały. Oznacza to, że każdy Vehicle (pojazd) powinien być biały.
+# Użyj poniższego kodu do tego ćwiczenia.
+# Oczekiwany wynik:
+# Kolor: Biały, Nazwa pojazdu: Szkolne Volvo, Prędkość: 180, Przebieg: 12
+# Kolor: Biały, Nazwa pojazdu: Audi Q5, Prędkość: 240, Przebieg: 18
+# Podpowiedź: Zmienne utworzone w .__init__() nazywane są zmiennymi instancji. Wartość zmiennej instancji jest specyficzna dla konkretnego wystąpienia klasy.
+# Na przykład w rozwiązaniu obiekty wszystkie obiekty Vehicle mają name i max_speed, ale  wartości
+# zmiennych name i max_speed będą się różnić w zależności od instancji Vehicle. # Z drugiej
+# strony atrybuty klasy to atrybuty, które mają tę samą wartość dla wszystkich instancji klas.
+# Możesz zdefiniować atrybut klasy, przypisując wartość do nazwy zmiennej poza .__init__().
+#
+# class Vehicle:
+#
+#     def __init__(self, name, max_speed, mileage):
+#         self.name = name
+#         self.max_speed = max_speed
+#         self.mileage = mileage
+#     kolor = "Biały"
+#
+# class Bus(Vehicle):
+#     pass
+#
+# class Car(Vehicle):
+#     pass
+#
+# bus = Bus("Volvo", 180, 12)
+# car = Car("Audi", 240, 18)
+#
+# print(bus.kolor)
+# print(car.kolor)
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+# Dane:
+# Utwórz podrzędną klasę Bus, która dziedziczy po klasie Vehicle. Domyślna opłata za przejazd dla dowolnego pojazdu to liczba miejsc * 100.
+# Natomiast jeśli School_bus to instancja klasy Bus, musimy dodać dodatkowe 10% do pełnej ceny jako opłatę za utrzymanie.
+# Tak więc łączna opłata za przejazd autobusem stanie się ostateczną kwotą = opłata całkowita + 10% ceny całkowitej.
+# Uwaga: autobus może pomieścić 50 osób, więc ostateczna kwota taryfy powinna wynosić 5500. Musisz zastąpić metodę fare() klasy Vehicle w klasie Bus.
+# Użyj poniższego kodu dla swojej nadrzędnej klasy Vehicle. Musimy uzyskać dostęp do klasy nadrzędnej z wnętrza metody klasy potomnej.
+#
+# class Vehicle:
+#     def __init__(self, name, mileage, capacity):
+#         self.name = name
+#         self.mileage = mileage
+#         self.capacity = capacity
+#
+#     def fare(self):
+#         return self.capacity * 100
+#
+# class Bus(Vehicle):
+#     def fare(self):
+#         kwota = Vehicle.fare(self)
+#         return kwota * 1.1
+#
+# school_bus = Bus("Szkolne Volvo", 12, 50)
+# print("Całkowita opłata za przejazd autobusem wynosi:", school_bus.fare())
+# ---------------------------------------------------------------------------------
+# CWICZENIE
+#
+# class Vehicle:
+#     def __init__(self, name, mileage, capacity):
+#         self.name = name
+#         self.mileage = mileage
+#         self.capacity = capacity
+#
+# class Bus(Vehicle):
+#     pass
+#
+# School_bus = Bus("Szkolne Volvo", 12, 50)
+# print(type(School_bus))
+# --------------------------------------------------------------------------------------------------------
 # ĆWICZENIA 07.02.2022 Z WOJTKIEM
 
 # import sqlite3
